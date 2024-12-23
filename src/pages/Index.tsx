@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { DoctorCard } from "@/components/DoctorCard";
 import { Testimonials } from "@/components/Testimonials";
+import { BookingForm } from "@/components/BookingForm";
 
 const Index = () => {
   const doctors = [
@@ -34,6 +35,12 @@ const Index = () => {
               <DoctorCard key={index} {...doctor} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="booking" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <BookingForm />
         </div>
       </section>
 
