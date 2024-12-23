@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking');
+    bookingSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-gradient-to-r from-primary/10 to-secondary/10 py-20">
       <div className="container mx-auto px-4">
@@ -12,7 +17,7 @@ export const Hero = () => {
             Experience personalized homeopathic treatment from certified professionals
             through convenient online consultations.
           </p>
-          <Button size="lg" className="text-lg px-8">
+          <Button size="lg" className="text-lg px-8" onClick={scrollToBooking}>
             Schedule Consultation
           </Button>
         </div>

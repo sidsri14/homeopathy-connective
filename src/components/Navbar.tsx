@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Navbar = () => {
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking');
+    bookingSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
@@ -16,7 +21,7 @@ export const Navbar = () => {
             <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
             <a href="#doctors" className="text-gray-600 hover:text-primary transition-colors">Our Doctors</a>
             <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a>
-            <Button variant="default">Book Appointment</Button>
+            <Button variant="default" onClick={scrollToBooking}>Book Appointment</Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -32,7 +37,7 @@ export const Navbar = () => {
                   <a href="#" className="text-gray-600 hover:text-primary transition-colors">Home</a>
                   <a href="#doctors" className="text-gray-600 hover:text-primary transition-colors">Our Doctors</a>
                   <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a>
-                  <Button variant="default" className="w-full">Book Appointment</Button>
+                  <Button variant="default" className="w-full" onClick={scrollToBooking}>Book Appointment</Button>
                 </div>
               </SheetContent>
             </Sheet>
